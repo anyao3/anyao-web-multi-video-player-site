@@ -3,7 +3,7 @@ const RELEASE_BASE = `https://github.com/anyao3/anyao-web-multi-video-player-sit
 const MAC_ARM64_DOWNLOAD_URL = `${RELEASE_BASE}/Anyao.Web.Multi.Video.Player-${PRODUCT_VERSION}-arm64.dmg`;
 const MAC_INTEL_DOWNLOAD_URL = `${RELEASE_BASE}/Anyao.Web.Multi.Video.Player-${PRODUCT_VERSION}-x64.dmg`;
 const WINDOWS_DOWNLOAD_URL = `${RELEASE_BASE}/Anyao.Web.Multi.Video.Player.Setup.${PRODUCT_VERSION}.exe`;
-const PURCHASE_URL = "https://buy.polar.sh/polar_cl_wMMmyHflolMDqqsrUEf3gFgWV0uXeMMqbwcsa1DcOIv";
+const PURCHASE_URL = "https://buy.polar.sh/polar_cl_tak7fd5x8EhGhrPQTGvw6fEZrADQ40S7HpSxk0m8OhC";
 const DOWNLOADS_ENABLED = true;
 const PURCHASES_ENABLED = true;
 
