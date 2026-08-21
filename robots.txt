@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anyao3.github.io/anyao-web-multi-video-player-site/sitemap.xml
