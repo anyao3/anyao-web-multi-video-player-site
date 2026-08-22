@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-copy]").forEach((button) => button.addEventListener("click", async () => {
     await navigator.clipboard.writeText(button.dataset.copy);
     const previous = button.textContent;
-    button.textContent = "Copied";
+    button.textContent = button.dataset.copiedLabel || "Copied";
     setTimeout(() => { button.textContent = previous; }, 1400);
   }));
 });
