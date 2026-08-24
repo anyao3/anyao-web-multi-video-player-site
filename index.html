@@ -66,6 +66,15 @@
       <details><summary>Where is my data stored?</summary><p>Bookmarks, playlists, settings, and local license state are stored on your device. Opening pages and playing media necessarily sends requests to the selected website and its media providers.</p></details>
     </div></section>
   </main>
+  <dialog class="mac-download-dialog" id="mac-download-dialog" aria-labelledby="mac-dialog-title">
+    <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+    <p class="eyebrow">BEFORE YOU DOWNLOAD</p>
+    <h2 id="mac-dialog-title">One command may be required on first launch.</h2>
+    <p>Because this build is not notarized by Apple, macOS may say the app is damaged. After moving the app to Applications, open Terminal and run:</p>
+    <pre class="command"><code>xattr -dr com.apple.quarantine "/Applications/Anyao Web Multi Video Player.app"</code></pre>
+    <p class="dialog-note">Only run this command for the app downloaded directly from this official page.</p>
+    <div class="dialog-actions"><button type="button" class="copy-command" data-copy='xattr -dr com.apple.quarantine "/Applications/Anyao Web Multi Video Player.app"'>Copy command</button><a class="dialog-download" href="#">Download DMG</a></div>
+  </dialog>
   <footer><div><span>Anyao Web Multi Video Player</span><small>Desktop multi-video browsing, organized.</small></div><nav><a href="legal.html">Legal &amp; Support</a><a href="mailto:anyao.support@gmail.com">Contact</a></nav><small>Not affiliated with YouTube, Pornhub, Google, Microsoft, Mozilla, or any other third-party service. All trademarks belong to their owners.</small></footer>
   <script src="site-config.js?v=2"></script>
 </body>

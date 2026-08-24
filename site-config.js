@@ -19,6 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
       link.querySelector(".button-label")?.replaceChildren(document.createTextNode("Coming soon"));
     }
   });
+  const macDialog = document.querySelector("#mac-download-dialog");
+  const macDialogDownload = macDialog?.querySelector(".dialog-download");
+  document.querySelectorAll('[data-download="mac-arm64"], [data-download="mac-intel"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (!DOWNLOADS_ENABLED || !macDialog?.showModal || !macDialogDownload) return;
+      event.preventDefault();
+      macDialogDownload.href = link.href;
+      macDialog.showModal();
+    });
+  });
+  macDialogDownload?.addEventListener("click", () => macDialog.close());
+  macDialog?.addEventListener("click", (event) => { if (event.target === macDialog) macDialog.close(); });
   document.querySelectorAll("[data-purchase]").forEach((link) => {
     link.href = PURCHASE_URL;
     if (!PURCHASES_ENABLED) {

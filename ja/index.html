@@ -24,7 +24,7 @@
 <body>
   <header class="site-header"><a class="brand" href="#top"><img src="../assets/app-icon.png?v=2" alt="" width="36" height="36"><span>Anyao <b>Web Multi Video Player</b></span></a><div class="header-actions"><nav><a href="#features">機能</a><a href="#services">対応サービス</a><a href="#pricing">無料版・Pro版</a><a href="#download">ダウンロード</a><a href="#faq">FAQ</a></nav><a class="language-switch" href="../" data-language-choice="en" lang="en">English</a></div></header>
   <main id="top">
-    <section class="hero section"><div class="hero-copy"><p class="eyebrow">デスクトップ・マルチ動画ブラウザ</p><h1>Web動画を集める。<br><span>まとめて再生する。</span></h1><p class="lead">Webページを普段どおり閲覧し、見たい動画を保存。複数のURLを一つの画面に並べて同時再生できます。</p><div class="hero-actions"><a class="button primary" href="#download">無料でダウンロード</a><a class="button secondary" href="#pricing">無料版とPro版を比較</a></div><p class="microcopy">無料版はアカウント登録不要。ブックマークとプレイリストは端末内に保存されます。</p></div>
+    <section class="hero section"><div class="hero-copy"><p class="eyebrow">デスクトップ・マルチ動画ブラウザ</p><h1>Web動画を集めて、<br><span>まとめて再生。</span></h1><p class="lead">Webページを普段どおり閲覧し、見たい動画を保存。複数のURLを一つの画面に並べて同時再生できます。</p><div class="hero-actions"><a class="button primary" href="#download">無料でダウンロード</a><a class="button secondary" href="#pricing">無料版とPro版を比較</a></div><p class="microcopy">無料版はアカウント登録不要。ブックマークとプレイリストは端末内に保存されます。</p></div>
       <div class="visual"><img src="../assets/app-icon.png?v=3" width="1254" height="1254" alt="Anyao Web Multi Video Playerのアプリアイコン"></div>
     </section>
 
@@ -67,6 +67,15 @@
       <details><summary>データはどこに保存されますか？</summary><p>ブックマーク、プレイリスト、設定、ローカルのライセンス状態は端末内に保存されます。ページ表示や動画再生時には、選択したWebサイトと配信事業者へ通信が発生します。</p></details>
     </div></section>
   </main>
+  <dialog class="mac-download-dialog" id="mac-download-dialog" aria-labelledby="mac-dialog-title">
+    <form method="dialog"><button class="dialog-close" aria-label="閉じる">×</button></form>
+    <p class="eyebrow">ダウンロード前にご確認ください</p>
+    <h2 id="mac-dialog-title">初回起動時にコマンドが必要な場合があります。</h2>
+    <p>このビルドはAppleの公証を受けていないため、macOSが「壊れているため開けません」と表示する場合があります。アプリをApplicationsへ移動した後、ターミナルで次のコマンドを実行してください。</p>
+    <pre class="command"><code>xattr -dr com.apple.quarantine "/Applications/Anyao Web Multi Video Player.app"</code></pre>
+    <p class="dialog-note">この公式ページからダウンロードしたアプリに対してのみ実行してください。</p>
+    <div class="dialog-actions"><button type="button" class="copy-command" data-copy='xattr -dr com.apple.quarantine "/Applications/Anyao Web Multi Video Player.app"' data-copied-label="コピーしました">コマンドをコピー</button><a class="dialog-download" href="#">DMGをダウンロード</a></div>
+  </dialog>
   <footer><div><span>Anyao Web Multi Video Player</span><small>Web動画をまとめて整理・再生。</small></div><nav><a href="../legal.html">利用規約・サポート（英語）</a><a href="mailto:anyao.support@gmail.com">お問い合わせ</a></nav><small>YouTube、Pornhub、Google、Microsoft、Mozilla、その他の第三者サービスとは提携していません。商標は各権利者に帰属します。</small></footer>
   <script src="../site-config.js?v=2"></script>
 </body>
