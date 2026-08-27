@@ -1,4 +1,4 @@
-const PRODUCT_VERSION = "0.1.0";
+const PRODUCT_VERSION = "0.1.1";
 const RELEASE_BASE = `https://github.com/anyao3/anyao-web-multi-video-player-site/releases/download/v${PRODUCT_VERSION}`;
 const MAC_ARM64_DOWNLOAD_URL = `${RELEASE_BASE}/Anyao.Web.Multi.Video.Player-${PRODUCT_VERSION}-arm64.dmg`;
 const MAC_INTEL_DOWNLOAD_URL = `${RELEASE_BASE}/Anyao.Web.Multi.Video.Player-${PRODUCT_VERSION}-x64.dmg`;
