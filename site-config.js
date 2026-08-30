@@ -4,10 +4,18 @@ const MAC_ARM64_DOWNLOAD_URL = `${RELEASE_BASE}/Anyao.Web.Multi.Video.Player-${P
 const MAC_INTEL_DOWNLOAD_URL = `${RELEASE_BASE}/Anyao.Web.Multi.Video.Player-${PRODUCT_VERSION}-x64.dmg`;
 const WINDOWS_DOWNLOAD_URL = `${RELEASE_BASE}/Anyao.Web.Multi.Video.Player.Setup.${PRODUCT_VERSION}.exe`;
 const PURCHASE_URL = "https://buy.polar.sh/polar_cl_tak7fd5x8EhGhrPQTGvw6fEZrADQ40S7HpSxk0m8OhC";
-const DOWNLOADS_ENABLED = true;
-const PURCHASES_ENABLED = true;
+const DOWNLOADS_ENABLED = false;
+const PURCHASES_ENABLED = false;
 
 document.addEventListener("DOMContentLoaded", () => {
+  const isJapanese = document.documentElement.lang === "ja";
+  const maintenance = document.createElement("section");
+  maintenance.className = "maintenance-notice";
+  maintenance.setAttribute("role", "status");
+  maintenance.innerHTML = isJapanese
+    ? '<p class="eyebrow">MAINTENANCE</p><h1>現在メンテナンス中です</h1><p>アプリの配布および販売を一時停止しています。再開までしばらくお待ちください。</p>'
+    : '<p class="eyebrow">MAINTENANCE</p><h1>Temporarily under maintenance</h1><p>App downloads and purchases are currently unavailable. Please check back later.</p>';
+  document.querySelector("main")?.replaceChildren(maintenance);
   document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = `v${PRODUCT_VERSION}`; });
   const urls = { "mac-arm64": MAC_ARM64_DOWNLOAD_URL, "mac-intel": MAC_INTEL_DOWNLOAD_URL, windows: WINDOWS_DOWNLOAD_URL };
   document.querySelectorAll("[data-download]").forEach((link) => {
@@ -16,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       link.removeAttribute("href");
       link.classList.add("is-disabled");
       link.setAttribute("aria-disabled", "true");
-      link.querySelector(".button-label")?.replaceChildren(document.createTextNode("Coming soon"));
+      link.querySelector(".button-label")?.replaceChildren(document.createTextNode(isJapanese ? "メンテナンス中" : "Under maintenance"));
     }
   });
   const macDialog = document.querySelector("#mac-download-dialog");
